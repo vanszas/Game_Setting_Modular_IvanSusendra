@@ -34,3 +34,7 @@ Thumbs.db
 *.exe
 *.app
 
+Content/Scene_Warehouse/Assets/MS/3D/Ind_War_Storage_Crate_Trap_Covered_01/SM_Ind_War_Storage_Crate_Trap_Covered_01.uasset
+Content/Scene_Warehouse/Assets/MS/3D/Ind_War_Storage_Crate_Trap_Covered_01/MI_Ind_War_Storage_Crate_Trap_Covered_01.uasset
+Content/Scene_Warehouse/Assets/MS/3D/Ind_War_Storage_Cabinet_Metal_Rusty_01/SM_Ind_War_Storage_Cabinet_Metal_Rusty_01.uasset
+Content/Scene_Warehouse/Assets/MS/3D/Ind_War_Storage_Cabinet_Metal_Rusty_01/MI_Ind_War_Storage_Cabinet_Metal_Rusty_01.uasset
