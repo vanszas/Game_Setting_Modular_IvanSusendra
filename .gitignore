@@ -1,0 +1,36 @@
+# Visual Studio files
+.vs/
+*.VC.db
+*.VC.opendb
+*.suo
+*.sln
+*.xcodeproj
+*.xcworkspace
+
+# Compiled source files
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Unreal Engine
+*.pdb
+*.obj
+*.dll
+*.exe
+*.app
+
