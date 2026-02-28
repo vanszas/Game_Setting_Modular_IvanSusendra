@@ -1,4 +1,4 @@
-# SkripsiIvanSusendra_GameSetting
+# Game_Setting_Modular_IvanSusendra
 
 ## Bahasa Indonesia
 
@@ -14,6 +14,17 @@ Sebelum menggunakan project ini, pastikan pengguna sudah menginstal:
 * Komponen **Desktop development with C++**
 * Komponen pendukung C++ untuk Unreal Engine jika tersedia pada installer Visual Studio
 
+### Plugin Eksternal
+
+Project ini memerlukan plugin eksternal tambahan agar seluruh fitur pengaturan grafis dapat digunakan dengan benar.
+
+Pengguna **wajib mengunduh dan memasang plugin berikut** sesuai dengan versi **Unreal Engine 5.6** yang digunakan oleh project:
+
+* **NVIDIA DLSS Plugin for Unreal Engine 5.6**
+* **AMD FSR Plugin for Unreal Engine 5.6**
+
+Pastikan plugin yang digunakan benar-benar sesuai dengan versi engine project.
+
 ### Cara Menggunakan
 
 #### 1. Clone atau download repository
@@ -24,7 +35,16 @@ Clone repository ini ke komputer lokal, atau download dalam bentuk ZIP lalu extr
 
 Masuk ke folder project yang berisi file **`.uproject`**.
 
-#### 3. Generate Visual Studio project files
+#### 3. Pasang plugin eksternal
+
+Sebelum membuka project, pengguna harus terlebih dahulu mengunduh dan memasang plugin eksternal yang dibutuhkan, yaitu:
+
+* **DLSS UE 5.6**
+* **FSR UE 5.6**
+
+Jika diperlukan, letakkan plugin pada folder **`Plugins`** di dalam project.
+
+#### 4. Generate Visual Studio project files
 
 Pengguna **wajib melakukan generate Visual Studio project files** terlebih dahulu sebelum membuka project C++.
 
@@ -35,7 +55,7 @@ Caranya:
 
 Langkah ini diperlukan agar file solution **Visual Studio** terbentuk dengan benar.
 
-#### 4. Buka project di Visual Studio 2022
+#### 5. Buka project di Visual Studio 2022
 
 Setelah proses generate selesai:
 
@@ -43,7 +63,7 @@ Setelah proses generate selesai:
 * Gunakan **Visual Studio 2022 versi terbaru**
 * Tunggu proses indexing dan konfigurasi selesai
 
-#### 5. Build project
+#### 6. Build project
 
 Setelah solution berhasil dibuka:
 
@@ -54,9 +74,11 @@ Setelah solution berhasil dibuka:
 ### Catatan Penting
 
 * Jangan gunakan versi Visual Studio yang terlalu lama, karena dapat menyebabkan error pada proses generate, build, atau kompatibilitas toolchain C++ Unreal Engine.
+* Jika plugin eksternal belum terpasang, beberapa fitur seperti **DLSS** dan **FSR** mungkin tidak tersedia atau dapat menyebabkan error saat membuka maupun build project.
 * Jika project gagal dibuka, ulangi langkah berikut:
 
   * tutup Unreal Engine dan Visual Studio
+  * pastikan plugin eksternal sudah terpasang dengan benar
   * klik kanan file **`.uproject`**
   * pilih **Generate Visual Studio project files**
   * lalu build ulang di **Visual Studio 2022 versi terbaru**
@@ -72,8 +94,9 @@ Pengguna dapat mengembangkan sistem ini lebih lanjut untuk menyesuaikan kebutuha
 Jika project tidak dapat dijalankan pada komputer pengguna, langkah pertama yang harus dicek adalah:
 
 1. Apakah **Visual Studio 2022 versi terbaru** sudah terinstal
-2. Apakah file **Visual Studio project files** sudah di-generate dari file **`.uproject`**
-3. Apakah project sudah berhasil di-build tanpa error
+2. Apakah plugin eksternal **DLSS UE 5.6** dan **FSR UE 5.6** sudah terpasang
+3. Apakah file **Visual Studio project files** sudah di-generate dari file **`.uproject`**
+4. Apakah project sudah berhasil di-build tanpa error
 
 ---
 
@@ -91,6 +114,17 @@ Before using this project, make sure the user has installed:
 * The **Desktop development with C++** workload
 * Additional C++ components for Unreal Engine if available in the Visual Studio installer
 
+### External Plugins
+
+This project requires additional external plugins so that all graphics settings features can work properly.
+
+Users **must download and install the following plugins** according to the **Unreal Engine 5.6** version used by this project:
+
+* **NVIDIA DLSS Plugin for Unreal Engine 5.6**
+* **AMD FSR Plugin for Unreal Engine 5.6**
+
+Make sure the installed plugin versions match the engine version used by the project.
+
 ### How to Use
 
 #### 1. Clone or download the repository
@@ -101,7 +135,16 @@ Clone this repository to your local computer, or download it as a ZIP file and e
 
 Go to the project folder that contains the **`.uproject`** file.
 
-#### 3. Generate Visual Studio project files
+#### 3. Install external plugins
+
+Before opening the project, users must first download and install the required external plugins:
+
+* **DLSS UE 5.6**
+* **FSR UE 5.6**
+
+If needed, place the plugins inside the project's **`Plugins`** folder.
+
+#### 4. Generate Visual Studio project files
 
 The user **must generate the Visual Studio project files** before opening the C++ project.
 
@@ -112,7 +155,7 @@ Steps:
 
 This step is required to properly create the **Visual Studio solution** file.
 
-#### 4. Open the project in Visual Studio 2022
+#### 5. Open the project in Visual Studio 2022
 
 After the generation process is complete:
 
@@ -120,7 +163,7 @@ After the generation process is complete:
 * Use **the latest version of Visual Studio 2022**
 * Wait until indexing and configuration are completed
 
-#### 5. Build the project
+#### 6. Build the project
 
 After the solution has been opened successfully:
 
@@ -131,9 +174,11 @@ After the solution has been opened successfully:
 ### Important Notes
 
 * Do not use an outdated version of Visual Studio, as it may cause errors during the generate process, build process, or Unreal Engine C++ toolchain compatibility.
+* If the external plugins are not installed, some features such as **DLSS** and **FSR** may be unavailable or may cause errors when opening or building the project.
 * If the project fails to open, repeat these steps:
 
   * close Unreal Engine and Visual Studio
+  * make sure the required external plugins are installed correctly
   * right-click the **`.uproject`** file
   * select **Generate Visual Studio project files**
   * then rebuild the project using **the latest version of Visual Studio 2022**
@@ -149,8 +194,9 @@ Users may further expand this system according to their own project requirements
 If the project cannot run on the user’s computer, the first things to check are:
 
 1. Whether **the latest version of Visual Studio 2022** is already installed
-2. Whether the **Visual Studio project files** have been generated from the **`.uproject`** file
-3. Whether the project has been successfully built without errors
+2. Whether the external plugins **DLSS UE 5.6** and **FSR UE 5.6** are already installed
+3. Whether the **Visual Studio project files** have been generated from the **`.uproject`** file
+4. Whether the project has been successfully built without errors
 
 ---
 
